@@ -10,11 +10,15 @@ if status is-interactive
         # 判断是否为超级用户
         if test $user = "root"
             # 超级用户提示符
+            set_color red
             echo -n "# $cwd "
         else
             # 普通用户提示符
+            set_color green
             echo -n "$cwd \$ "
         end
+        # 重置颜色
+        set_color normal
     end
 end
 
